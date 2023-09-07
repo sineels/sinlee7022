@@ -1,10 +1,10 @@
-# GitHub Docs <!-- omit in toc -->
+# 깃허브독스 <!-- toc를 생략하다-->
 
-This repository contains the documentation website code and Markdown source files for [docs.github.com](https://docs.github.com).
+이 저장소에는 문서 웹 사이트 코드와 마크다운 소스 파일이 포함되어 있습니다. [docs.github.com](https://docs.github.com).
 
-GitHub's Docs team works on pre-production content in a private repo that regularly syncs with this public repo.
+GitHub의 Docs 팀은 이 공개 레포와 정기적으로 동기화되는 비공개 레포에서 사전 제작 콘텐츠를 작업한다.
 
-Use the table of contents icon <img src="/contributing/images/table-of-contents.png" width="25" height="25" /> on the top left corner of this document to navigate to a specific section quickly.
+목차 아이콘 사용 <img 스르씨="/contributing/images/table-of-contents.png" width="25" height="25" /> on the top left corner of this document to navigate to a specific section quickly.
 
 ## Contributing
 
