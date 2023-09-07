@@ -1,72 +1,68 @@
----
-title: Verifying your email address
-intro: 'Verifying your primary email address ensures strengthened security, allows {% data variables.product.prodname_dotcom %} staff to better assist you if you forget your password, and gives you access to more features on {% data variables.product.prodname_dotcom %}.'
+sinlee7022@gmail.com---
+sinlee7011@gmail.com제목: 이메일 주소 확인
+도입부: '주요 이메일 주소를 확인하면 보안이 강화되고 {% 데이터 변수가 보장됩니다.product.prodname_dotcom %} 직원이 암호를 잊으면 더 잘 지원하며 {% 데이터 변수.product.prodname_dotcom %}의 더 많은 기능을 액세스할 수 있습니다.'
 redirect_from:
-  - /articles/troubleshooting-email-verification
-  - /articles/setting-up-email-verification
-  - /articles/verifying-your-email-address
-  - /github/getting-started-with-github/verifying-your-email-address
+  - /articles/troubleshooting-email 검증
+  - /articles/set-up-email-검증
+  -                                 /articles/검은-당신의 이메일 주소                               
+  - /github/getting-started-with-github/verifying-Your-email-address
   - /github/getting-started-with-github/signing-up-for-github/verifying-your-email-address
-versions:
-  fpt: '*'
-  ghec: '*'
-topics:
-  - Accounts
-shortTitle: Verify your email address
+버전:
+ fpt: '*'
+                                            게크: ' *'                                          
+주제:
+  -                                                   회계                                                 
+sinlee7011@gmail.com짧은 제목: 이메일 주소를 확인하십시오.
 ---
-## About email verification
+##                                                     이메일 검증에 관한                                                   
 
-You can verify your email address after signing up for a new account, or when you add a new email address. If an email address is undeliverable or bouncing, it will be unverified.
+새 계정에 가입한 후 또는 새 이메일 주소를 추가한 후 이메일 주소를 확인할 수 있습니다. 이메일 주소가 배달되지 않거나 튀어나오면 검증되지 않습니다.
 
-If you do not verify your email address, you will not be able to:
-- Create or fork repositories
-- Create issues or pull requests
-- Comment on issues, pull requests, or commits
-- Authorize {% data variables.product.prodname_oauth_app %} applications
-- Generate {% data variables.product.pat_generic %}s
-- Receive email notifications
-- Star repositories
-- Create or update project boards, including adding cards
-- Create or update gists
-- Create or use {% data variables.product.prodname_actions %}
-- Sponsor developers with {% data variables.product.prodname_sponsors %}
-- Accept organization invitations
+이메일 주소를 확인하지 않으면 다음과 같이 확인할 수 없습니다.
+-                                                           생성 또는 포크 저장소                                                         
+-                                                                     이슈 생성 또는 요청 당김                                                                   
+-                                                                      이슈에 대한 논평, 요청 당기거나                                                                    
+- {% data variable.product.prodname_oauth_app %} 응용 프로그램
+- 생성 {% 데이터 변수.product.pat_generic %}s
+-                                                                        이메일 알림 수신                                                                      
+-                                                                         스타 리포지토리                                                                       
+-                                                                        카드 추가를 포함한 프로젝트 보드를 만들거나 업데이트합니다.                                                                      
+-                                                                        기스트 생성 또는 업데이트                                                                      
+-                                                                        {% data 변수를 생성하거나 사용하십시오.product.prodname_actions %}                                                                      
+-                                                                           {% 데이터 변수를 가진 스폰서 개발자.product.prodname_sponsors %}                                                                         
+-                                                                             조직 초대를 수락합니다.                                                                           
 
-{% warning %}
+{% 경고 %}
 
-**Warnings**:
+- {% data reusables.user-sets.no-verification-disposable-email %}
+- {% data reusables.user-sets.verify-org-proved-email-domain %}
 
-- {% data reusables.user-settings.no-verification-disposable-emails %}
-- {% data reusables.user-settings.verify-org-approved-email-domain %}
+                            {% 종료 경고                                               이메일 주소 확인                                                                        
 
-{% endwarning %}
+{% data reusables.user-sets.access_sets %}}
+{% data reusables.user-sets.emails %}
+1.     이메일 주소를 보면 클릭합니다.     **검증 이메일을 보내라**.
 
-## Verifying your email address
+   !["이메일" 페이지의 이메일 주소 목록의 스크린샷. 이메일 주소 아래에는 "검증 이메일 보내기"라고 표시된 링크가 오렌지색으로 윤곽이 드러납니다.](/자산/영상/도움/설정/이메일 검증-버튼.png)
+1.                                                                     {% data variable.product.prodname_dotcom %}은 링크가 있는 이메일을 보내줄 것입니다. 해당 링크를 클릭한 후 {% 데이터 변수.product.prodname_dotcom %} 대시보드로 가져와 확인 배너를 볼 수 있습니다.                                                            {% data variable.product.prodname_dotcom %}은 링크가 있는 이메일을 보내줄 것입니다. 해당 링크를 클릭한 후 {% 데이터 변수.product.prodname_dotcom %} 대시보드로 가져와 확인 배너를 볼 수 있습니다.                                                                   
 
-{% data reusables.user-settings.access_settings %}
-{% data reusables.user-settings.emails %}
-1. Under your email address, click **Resend verification email**.
+##                                                                      이메일 검증 문제 해결                                                                    
 
-   ![Screenshot of a list of email addresses on the "Emails" page. Under an email address, a link, labeled "Resend verification email," is outlined in orange.](/assets/images/help/settings/email-verify-button.png)
-1. {% data variables.product.prodname_dotcom %} will send you an email with a link in it. After you click that link, you'll be taken to your {% data variables.product.prodname_dotcom %} dashboard and see a confirmation banner.
+###                                                                      검증 메일을 보낼 수 없습니다.                                                                    
 
-## Troubleshooting email verification
+{% data reusables.user-sets.no-verification-disposable-email %}
 
-### Unable to send verification email
+###                                                           검증 링크 클릭 후 오류 페이지                                                         
 
-{% data reusables.user-settings.no-verification-disposable-emails %}
+검증 링크는 24시간 후에 만료됩니다. 24시간 이내에 이메일을 확인하지 않으면 다른 이메일 검증 링크를 요청할 수 있습니다. 자세한 내용은 "를 참조하십시오.[자동제목](/get-started/signing-up-for-github/verifying-Your-email-address)."
 
-### Error page after clicking verification link
+24시간 이내에 확인 메일의 링크를 클릭하고 오류 페이지로 향하면 {% 데이터 변수.location.product_location %}의 올바른 계정에 서명되도록 보장해야 합니다.
 
-The verification link expires after 24 hours. If you don't verify your email within 24 hours, you can request another email verification link. For more information, see "[AUTOTITLE](/get-started/signing-up-for-github/verifying-your-email-address)."
+1. {% data variable.product.signout_link %} {% data variable.location.product_location %} 에 대한 개인 계정 {% data variable.
+1.     브라우저를 그만두고 다시 시작하십시오.   
+1. {% data variable.product.signin_link %}, {% data variable.location.product_location %}, se 개인 계정 %}
+1.   우리가 보내준 이메일에서 검증 링크를 클릭하세요. 
 
-If you click on the link in the confirmation email within 24 hours and you are directed to an error page, you should ensure that you're signed into the correct account on {% data variables.location.product_location %}.
+##   추가 판독 
 
-1. {% data variables.product.signout_link %} of your personal account on {% data variables.location.product_location %}.
-1. Quit and restart your browser.
-1. {% data variables.product.signin_link %} to your personal account on {% data variables.location.product_location %}.
-1. Click on the verification link in the email we sent you.
-
-## Further reading
-
-- "[AUTOTITLE](/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/changing-your-primary-email-address)"
+-  "[자동제목](/account-and-profile/seting-up/setup-your-personal-account-on-github/managing-email-preference/changing-your-primary-email-address)"
