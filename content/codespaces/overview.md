@@ -1,33 +1,33 @@
 ---
-title: GitHub Codespaces overview
-shortTitle: Overview
-intro: 'This guide introduces {% data variables.product.prodname_github_codespaces %} and provides details on how it works and how to use it.'
-allowTitleToDifferFromFilename: true
+제목: GitHub Codespaces 개요
+짧은 제목: 개요
+도입부: '이 가이드는 {% 데이터 변수를 소개합니다.product.prodname_github_codespace %}를 소개하고 그것이 어떻게 작동하는지 및 어떻게 사용하는지에 대한 세부 사항을 제공합니다.'
+'제목 투 디퍼 프롬 파일 이름' 허용: 사실
 redirect_from:
-  - /codespaces/codespaces-reference/about-codespaces
-  - /github/developing-online-with-github-codespaces/about-github-codespaces
-  - /github/developing-online-with-codespaces/about-codespaces
-  - /codespaces/getting-started-with-codespaces/about-codespaces
-  - /codespaces/about-codespaces
-versions:
-  fpt: '*'
-  ghec: '*'
-type: overview
-topics:
-  - Codespaces
+  - /codespace/codespaces-reference/about-codespace
+  - /github/developing-online-with-github-codespace/about-github-codespace
+  - /github/개발-온라인-with-codespace/about-codespace
+  - /codespace/getting-started-with-codespace/about-codespace
+  - /codespace/about-codespace
+버전:
+ fpt: ' *'
+ 게크: ' *'
+유형: 개요
+주제:
+  - 코드스페이스
 ---
 
-## What is a codespace?
+## 코드스페이스는 무엇입니까?
 
-A codespace is a development environment that's hosted in the cloud. You can customize your project for {% data variables.product.prodname_github_codespaces %} by committing [configuration files](/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers) to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.
+코드스페이스는 클라우드에서 호스트되는 개발 환경입니다. {% data 변수.product.prodname_github_codespace %}에 대한 프로젝트를 커스터마이징할 수 있습니다. [구성 파일](/codespaces/seting-up-your-project-for-codespace/ading-a-dev-container-Configuration/Introduction-to-dev-containers) 당신의 모든 사용자에게 반복 가능한 코드 공간 구성을 생성하는 저장소 (흔히 코드로 구성)로.
 
-Each codespace you create is hosted by {% data variables.product.prodname_dotcom %} in a Docker container, running on a virtual machine. You can choose from a selection of virtual machine types, from 2 cores, 8 GB RAM, and 32 GB storage, up to 32 cores, 64 GB RAM, and 128 GB storage.
+당신이 생성하는 각 코드스페이스는 가상 머신에서 실행되는 도커 컨테이너에서 {% 데이터 변수.product.prodname_dotcom %}에 의해 호스트됩니다. 가상 머신 타입 선택 중 2개의 코어, 8GB 램, 32GB 스토리지 중 최대 32개의 코어, 64GB 램, 128GB 스토리지 중에서 선택할 수 있다.
 
-By default, codespaces are created from an Ubuntu Linux image that includes a selection of popular languages and tools, but you can use an image based on a Linux distribution of your choice and configure it for your particular requirements. Regardless of your local operating system, your codespace will run in a Linux environment. Windows and MacOS are not supported operating systems for the remote container.
+기본적으로 코드스페이스는 인기 언어와 도구의 선택을 포함하는 우분투 리눅스 이미지에서 생성되지만, 선택한 리눅스 배포를 기반으로 이미지를 사용하고 특정 요구 사항에 맞게 구성할 수 있다. 로컬 운영 체제와 상관없이 코드스페이스는 리눅스 환경에서 실행됩니다. 윈도우와 맥OS는 원격 컨테이너에 대한 운영 체제를 지원하지 않는다.
 
-You can connect to your codespaces from your browser, from {% data variables.product.prodname_vscode %}, from the JetBrains Gateway application, or by using {% data variables.product.prodname_cli %}. When you connect, you are placed within the Docker container. You do not have access to the outer Linux virtual machine host.
+브라우저에서 코드스페이스에 연결할 수 있습니다. {% 데이터 변수.product.prodname_vscode %}, JetBrains Gateway 애플리케이션에서 또는 {% 데이터 변수.product.prodname_cli %}를 사용하여 사용할 수 있습니다. 연결하면 도커 컨테이너 안에 배치됩니다. 외부 리눅스 가상 머신 호스트에 액세스할 수 없습니다.
 
-![Diagram showing the relationship between a code editor and a codespace running on an Azure virtual machine.](/assets/images/help/codespaces/codespaces-diagram.png)
+![애저 가상 머신에서 실행되는 코드 편집기와 코드스페이스의 관계를 나타내는 다이어그램.](/assets/images/help/codespaces/codespaces-diagram.png)
 
 ## Benefits of {% data variables.product.prodname_github_codespaces %}
 
