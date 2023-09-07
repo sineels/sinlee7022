@@ -1,10 +1,10 @@
-name: Close bad repo-sync PRs
+이름:  근접 불량 레포싱크 PR
 
-# **What it does**:
-#   Closes and PR from `repo-sync` to `main` that wasn't created by a Hubber.
-# **Why we have it**:
-#   Unfortunately, a lot of PRs in github/docs are created by people who
-#   shouldn't be creating such PRs. We bot our bots to own it.
+#**무슨짓**:
+# 허버가 만든 ‘레포싱크’부터 ‘메인’까지 클로즈와 PR.
+#**왜 우리가 가지고 있는지**:
+# 불행하게도, github/doc의 많은 PR은 사람들이 만들어집니다.
+# 그런 홍보를 만들어서는 안 된다. 우리는 그것을 소유하기 위해 우리의 봇들을 망치게 한다.
 # **Who does it impact**: Open-source.
 
 on:
