@@ -1,56 +1,180 @@
-# GitHub Docs <!-- omit in toc -->
+[![CI](https://github.com/tree-sitter/tree-sitter-javascript/actions/workflows/ci.yml/badge.svg)](https://github.com/tree-sitter/tree-sitter-javascript/actions/workflows/ci.yml)
+[![Close bad repo-sync PRs](https://github.com/github/docs/actions/workflows/close-bad-repo-sync-prs.yml/badge.svg)](https://github.com/github/docs/actions/workflows/close-bad-repo-sync-prs.yml)
+# Sample workflow for building and deploying a Next.js site to GitHub Pages
 
-This repository contains the documentation website code and Markdown source files for [docs.github.com](https://docs.github.com).
+#
 
-GitHub's Docs team works on pre-production content in a private repo that regularly syncs with this public repo.
+# To get started with Next.js see: https://nextjs.org/docs/getting-started
 
-Use the table of contents icon <img src="/contributing/images/table-of-contents.png" width="25" height="25" /> on the top left corner of this document to navigate to a specific section quickly.
+#
 
-## Contributing
+name: Deploy Next.js site to Pages
 
-See [the contributing guide](CONTRIBUTING.md) for detailed instructions on how to get started with our project.
+on:
 
-We accept different [types of contributions](https://github.com/github/docs/blob/main/contributing/types-of-contributions.md), including some that don't require you to write a single line of code.
+# Runs on pushes targeting the default branch
 
-On the GitHub Docs site, you can click the make a contribution button at the bottom of the page to open a pull request for quick fixes like typos, updates, or link fixes.
+push:
 
-<img src="./contributing/images/contribution_cta.png" width="400">
+branches: ["main"]
 
-For more complex contributions, you can open an issue using the most appropriate [issue template](https://github.com/github/docs/issues/new/choose) to describe the changes you'd like to see.
+# Allows you to run this workflow manually from the Actions tab
 
-If you're looking for a way to contribute, you can scan through our [existing issues](https://github.com/github/docs/issues) for something to work on. When ready, check out [Getting Started with Contributing](/CONTRIBUTING.md) for detailed instructions.
+workflow_dispatch:
 
-### Join us in discussions
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 
-We use GitHub Discussions to talk about all sorts of topics related to documentation and this site. For example: if you'd like help troubleshooting a PR, have a great new idea, or want to share something amazing you've learned in our docs, join us in the [discussions](https://github.com/github/docs/discussions).
+permissions:
 
-### And that's it!
+contents: read
 
-If you're having trouble with your GitHub account, contact [Support](https://support.github.com).
+pages: write
 
-That's how you can easily become a member of the GitHub Docs community. :sparkles:
+id-token: write
 
-## READMEs
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 
-In addition to the README you're reading right now, this repo includes other READMEs that describe the purpose of each subdirectory in more detail:
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
-- [content/README.md](content/README.md)
-- [content/graphql/README.md](content/graphql/README.md)
-- [content/rest/README.md](content/rest/README.md)
-- [contributing/README.md](contributing/README.md)
-- [data/README.md](data/README.md)
-- [data/reusables/README.md](data/reusables/README.md)
-- [data/variables/README.md](data/variables/README.md)
-- [src/README.md](src/README.md)
+concurrency:
 
-## License
+group: "pages"
 
-The GitHub product documentation in the assets, content, and data folders are licensed under a [CC-BY license](LICENSE).
+cancel-in-progress: false
 
-All other code in this repository is licensed under the [MIT license](LICENSE-CODE).
+jobs:
 
-When using the GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).
+# Build job
 
-## Thanks :purple_heart:
+build:
 
-Thanks for all your contributions and efforts towards improving the GitHub documentation. We thank you for being part of our :sparkles: community :sparkles:!
+runs-on: ubuntu-latest
+
+steps:
+
+- name: Checkout
+
+uses: actions/checkout@v3
+
+- name: Detect package manager
+
+id: detect-package-manager
+
+run: |
+
+if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+
+echo "manager=yarn" >> $GITHUB_OUTPUT
+
+echo "command=install" >> $GITHUB_OUTPUT
+
+echo "runner=yarn" >> $GITHUB_OUTPUT
+
+exit 0
+
+elif [ -f "${{ github.workspace }}/package.json" ]; then
+
+echo "manager=npm" >> $GITHUB_OUTPUT
+
+echo "command=ci" >> $GITHUB_OUTPUT
+
+echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+
+exit 0
+
+else
+
+echo "Unable to determine package manager"
+
+exit 1
+
+fi
+
+- name: Setup Node
+
+uses: actions/setup-node@v3
+
+with:
+
+node-version: "16"
+
+cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+- name: Setup Pages
+
+uses: actions/configure-pages@v3
+
+with:
+
+# Automatically inject basePath in your Next.js configuration file and disable
+
+# server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+
+#
+
+# You may remove this line if you want to manage the configuration yourself.
+
+static_site_generator: next
+
+- name: Restore cache
+
+uses: actions/cache@v3
+
+with:
+
+path: |
+
+.next/cache
+
+# Generate a new cache whenever packages or source files change.
+
+key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+
+# If source files changed but packages didn't, rebuild from a prior cache.
+
+restore-keys: |
+
+${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+
+- name: Install dependencies
+
+run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+- name: Build with Next.js
+
+run: ${{ steps.detect-package-manager.outputs.runner }} next build
+
+- name: Static HTML export with Next.js
+
+run: ${{ steps.detect-package-manager.outputs.runner }} next export
+
+- name: Upload artifact
+
+uses: actions/upload-pages-artifact@v2
+
+with:
+
+path: ./out
+
+# Deployment job
+
+deploy:
+
+environment:
+
+name: github-pages
+
+url: ${{ steps.deployment.outputs.page_url }}
+
+runs-on: ubuntu-latest
+
+needs: build
+
+steps:
+
+- name: Deploy to GitHub Pages
+
+id: deployment
+
+uses: actions/deploy-pages@v2
+
