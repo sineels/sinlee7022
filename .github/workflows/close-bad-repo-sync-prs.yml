@@ -1,68 +1,68 @@
-name: Close bad repo-sync PRs
+sinlee702w@gmail.com       :        근접 불량 레포싱크 PR
 
-# **What it does**:
-#   Closes and PR from `repo-sync` to `main` that wasn't created by a Hubber.
-# **Why we have it**:
-#   Unfortunately, a lot of PRs in github/docs are created by people who
-#   shouldn't be creating such PRs. We bot our bots to own it.
-# **Who does it impact**: Open-source.
+#**무슨짓**:
+# 허버가 만든 ‘레포싱크’부터 ‘메인’까지 클로즈와 PR.
+#**왜 우리가 가지고 있는지**:
+# 불행하게도, github/doc의 많은 PR은 사람들이 만들어집니다.
+# 그런 홍보를 만들어서는 안 된다. 우리는 그것을 소유하기 위해 우리의 봇들을 망치게 한다.
+# **누가 영향을 미치는가*: 오픈 소스.
 
-on:
-  pull_request_target:
+온:
+ pull_request_target :
 
-permissions:
-  contents: write
-  pull-requests: write
+허가:
+         내용                :       적음
+         당김 요청                :       적음
 
-jobs:
-  close-invalid-repo-sync-pr:
-    if: ${{ github.repository == 'github/docs' && github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'repo-sync' }}
-    name: Close if invalid repo-sync PR author
-    runs-on: ubuntu-latest
-    steps:
-      - name: Close pull request if unwanted
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
-        with:
-          github-token: ${{ secrets.DOCS_BOT_PAT_WRITEORG_PROJECT }}
-          script: |
-            const { owner, repo } = context.repo
-            const prCreator = context.actor
-            const prNumber = context.issue.number
+직업:
+         근접무효-레포-싱크-pr        :
+         만약                :       ${{ github.repository == '기/닥스'       && github.event.pull_request.base.ref ==       'main'       && github.event.pull_request.head.ref ==       'repo-sync' }}
+         이름                :       무효인 repo-sync PR 작성자 종료
+         런온                :       우분투 후기
+         스텝        :
+            -       이름        :       원하지 않는 경우 가까운 당김 요청
+         사용                :       동작/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+         와        :
+         기 토큰                :       ${{ 비밀 Docs_bot_pat_writeorg_project }}
+         스크립트                :       |
+     곤봉   곤봉    {    주인  ,    레포    }     = context.repo     
+ const prCreator = context.actor 
+ const prNumber = context.issue.number 
 
-            try {
-              await github.rest.teams.getMembershipForUserInOrg({
-                org: 'github',
-                team_slug: 'employees',
-                username: prCreator
+      시도      {
+ github.rest.teams.getMembershipForUserInOrg (기기) {
+ org       :      기,
+      팀_슬러그            :      '직원',
+      사용자명            :      프르크리에이터
               })
 
-              // If the PR creator is a GitHub employee, stop now
-              console.log("PR creator is a GitHub employee")
-              return
-            } catch (err) {
-              // An error will be thrown if the user is not a GitHub employee.
-              // That said, we still want to proceed anyway!
+      // PR 작성자가 GitHub 직원인 경우      ,      지금 멈추다    
+                   console.log(     
+      반환      
+            }      캐치(오류)      {
+      // 사용자가 GitHub 직원이 아닌 경우 오류가 던질 것입니다.      
+      //그것은      ,      우리는 어쨌든 여전히 진행하고 싶습니다!    
             }
 
-            // Close the PR and add the invalid label
-            await github.rest.issues.update({
-              owner,
-              repo,
-              issue_number: prNumber,
-              labels: ['invalid'],
-              state: 'closed'
+      // PR을 닫고 무효 레이블을 추가합니다.      
+ github.rest.issues.update(기) {
+      주인      ,
+     레포     ,
+     이슈_번호          :      프르넘버,
+     레이블         :      ['무효'],
+     상태         :      '폐쇄'
             })
 
-            // Comment on the PR
-            await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number: prNumber,
-              body: "Please leave this `repo-sync` branch to the robots!\n\nI'm going to close this pull request now, but feel free to open a new issue or ask any questions in [discussions](https://github.com/github/docs/discussions)!"
+   // 홍보에 대한 논평   
+ github.rest.issues.createComment(기다림) {
+ 주인 ,
+ 레포 ,
+ 이슈_번호 :  프르넘버,
+ 몸 :  "이 "레포싱크" 지점을 로봇에 남겨주세요!\n\nI는 지금 이 당김 요청을 닫을 것입니다. 그러나 새로운 문제를 열거나 [토론] (https://github.com/github/docs/토론)에서 질문을 할 수 있습니다!"
             })
 
-      - name: Send Slack notification if workflow fails
-        uses: someimportantcompany/github-actions-slack-message@1d367080235edfa53df415bd8e0bbab480f29bad
+       -  이름:  워크플로우가 실패하면 슬랙 알림을 보내라
+        uses: 일부 중요한 회사/기-액션-슬랙-메시지@1d367080235edfa53df415bd8e0bbab480f29bad
         if: failure()
         with:
           channel: ${{ secrets.DOCS_ALERTS_SLACK_CHANNEL_ID }}
