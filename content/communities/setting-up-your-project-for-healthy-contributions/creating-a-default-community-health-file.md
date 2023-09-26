@@ -1,42 +1,42 @@
----
-title: Creating a default community health file
-intro: 'You can create default community health files, such as CONTRIBUTING and CODE_OF_CONDUCT. Default files will be used for any repository owned by the account that does not contain its own file of that type.'
+sinlee7022@gmail.com
+제목: 기본 커뮤니티 건강 파일 작성
+도입부: 'CONTRIBUTING 및 CODE_OF_CONDUCT와 같은 기본 커뮤니티 건강 파일을 만들 수 있습니다. 기본 파일은 해당 유형의 자체 파일을 포함하지 않는 계정이 소유한 저장소에 사용될 것입니다.'
 redirect_from:
-  - /articles/creating-a-default-community-health-file-for-your-organization
-  - /github/building-a-strong-community/creating-a-default-community-health-file-for-your-organization
+  - /articles/reating-a-default-community-health-file-for-you-organization
+  - /github/building-a-strong-community/reating-a-default-community-health-file-for-Your-organization
   - /github/building-a-strong-community/creating-a-default-community-health-file
-versions:
-  fpt: '*'
-  ghes: '*'
-  ghec: '*'
-topics:
-  - Community
-shortTitle: Community health file
+버전:
+ fpt: '*'
+    게스: '    *'
+   게크: ' *  게크: ' *'  
+주제:
+  -    공동체  
+짧은 제목: 지역사회 건강 파일
 ---
 
-## About default community health files
+##    기본 커뮤니티 건강 파일에 관한  
 
-You can add default community health files to a public repository called `.github`, in the root of the repository or in the `docs` or `.github` folders.
+  기본 커뮤니티 건강 파일을 공용 저장소에 추가할 수 있습니다.    `.github`  , 저장소의 뿌리 또는 에    `의사`    또는    `.github`    폴더  
 
-{% data variables.product.product_name %} will use and display default files for any repository owned by the account that does not have its own file of that type in any of the following places:
-- the root of the repository
-- the `.github` folder
-- the `docs` folder
+{% data variable.product.product_name %}는 다음 각 호의 어느 하나에 해당하는 곳에 해당 유형의 자체 파일이 없는 계정이 소유한 저장소에 기본 파일을 사용하고 표시합니다.
+-    저장소근  
+-   에   `.github`   폴더 
+-   에   `의사`   폴더 
 
-For example, anyone who creates an issue or pull request in a repository that does not have its own CONTRIBUTING file will see a link to the default CONTRIBUTING file. If a repository has any files in its own `.github/ISSUE_TEMPLATE` folder{% ifversion fpt or ghes or ghec %}, including issue templates or a _config.yml_ file,{% endif %} none of the contents of the default `.github/ISSUE_TEMPLATE` folder will be used.
+예를 들어 자체적으로 기여 파일이 없는 저장소에서 이슈를 생성하거나 요청을 당기는 사람은 기본 기여 파일에 대한 링크를 볼 수 있습니다. 저장소가 자체 파일을 가지고 있는 경우  `.github/ISSUE_TEMPLATE`  이슈 템플릿 또는 a를 포함하는 폴더 {% ifversion fpt 또는 ghes 또는 ghec %}  _config.yml_  파일,{% endif %} default의 내용은 하나도 없습니다  `.github/ISSUE_TEMPLATE`  폴더를 사용할 것입니다.
 
-Default files are not included in clones, packages, or downloads of individual repositories because they are stored only in the `.github` repository.
+기본 파일은 개별 저장소의 클론, 패키지 또는 다운로드에만 포함되지 않습니다.  `.github`  저장소
 
-## Supported file types
+##  지원 파일 유형
 
-You can create defaults in your organization{% ifversion fpt or ghes or ghec %} or personal account{% endif %} for the following community health files:
+조직에서 기본값 {% ifversion fpt 또는 ghes 또는 ghec %} 또는 다음 지역사회 건강 파일에 대한 개인 계정 {% endif %}을 생성할 수 있습니다.
 
-Community health file | Description
---- | ---{% ifversion fpt or ghec %}
-_CODE_OF_CONDUCT.md_ | A CODE_OF_CONDUCT file defines standards for how to engage in a community. For more information, see "[AUTOTITLE](/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)."{% endif %}
-_CONTRIBUTING.md_ | A CONTRIBUTING file communicates how people should contribute to your project. For more information, see "[AUTOTITLE](/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)."{% ifversion discussion-category-forms %}
-Discussion category forms | Discussion category forms customize the templates that are available for community members to use when they open new discussions in your repository. For more information, see "[AUTOTITLE](/discussions/managing-discussions-for-your-community/creating-discussion-category-forms)."{% endif %}{% ifversion fpt or ghec %}
-_FUNDING.yml_ | A FUNDING file displays a sponsor button in your repository to increase the visibility of funding options for your open source project. For more information, see "[AUTOTITLE](/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)."{% endif %}
+지역사회 건강 파일 | 설명
+---|-{% ifversion fpt 또는 ghec %}
+_CODE_OF_CONDUCT.md_  | CODE_OF_CONDUCT 파일은 커뮤니티에 참여하는 방법에 대한 표준을 정의합니다. 자세한 내용은 "를 참조하십시오.[자동제목].{% endif %}
+_CONTRIBUTING.md_  | 기여 파일은 사람들이 당신의 프로젝트에 어떻게 기여해야 하는지를 전달합니다. 자세한 내용은 "를 참조하십시오.[자동제목](/지역사회/사회-기업-건강기여/기여-기관-기여).{% ifversion discussion-category-forms %}
+토론 범주 형식 | 토론 범주 형식은 커뮤니티 구성원이 저장소에서 새로운 토론을 열 때 사용할 수 있는 템플릿을 사용자 정의합니다. 자세한 내용은 "를 참조하십시오.[자동제목](/토론/관리-토론-당신의 공동체를 위한/토론/창조-범주-형태).{% endif %}{% ifversion fpt 또는 ghec %}
+_FUNDING.yml_ | FUNDING 파일은 오픈 소스 프로젝트에 대한 자금 지원 옵션의 가시성을 높이기 위해 저장소에 스폰서 버튼을 표시합니다. 자세한 내용은 "를 참조하십시오.[AUTOTITLE](/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository).{% endif %}
 _GOVERNANCE.md_ | A GOVERNANCE file lets people know about how your project is governed. For example, it might discuss project roles and how decisions are made.
 Issue and pull request templates{% ifversion fpt or ghes or ghec %} and _config.yml_{% endif %} | Issue and pull request templates customize and standardize the information you'd like contributors to include when they open issues and pull requests in your repository. For more information, see "[AUTOTITLE](/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates)."{% ifversion fpt or ghes or ghec %}
 `SECURITY.md` | A SECURITY file gives instructions for how to report a security vulnerability in your project. For more information, see "[AUTOTITLE](/code-security/getting-started/adding-a-security-policy-to-your-repository)."{% endif %}
