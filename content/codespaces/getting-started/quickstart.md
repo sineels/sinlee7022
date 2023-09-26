@@ -1,36 +1,115 @@
----
-title: 'Quickstart for {% data variables.product.prodname_github_codespaces %}'
-shortTitle: 'Quickstart for {% data variables.product.prodname_codespaces %}'
-intro: 'Try out {% data variables.product.prodname_github_codespaces %} in 5 minutes.'
-allowTitleToDifferFromFilename: true
-versions:
-  fpt: '*'
-  ghec: '*'
-type: quick_start
-topics:
-  - Codespaces
+sinlee7022@gmail.com
+제목 : '{% 데이터 변수 과 스타트.# 기여자 규약 행동 코드
+
+## 우리의 공약
+
+회원, 기여자, 지도자로서 우리 공동체에 대한 참여를 연령, 신체 규모, 가시적이거나 보이지 않는 장애, 민족성, 성 특성, 성 정체성과 표현, 경험 수준, 교육, 사회경제적 지위, 국적, 개인적 외모, 인종, 종교 또는 성적 정체성과 지향에 관계없이 모두에게 괴롭힘 없는 경험으로 만들 것을 다짐한다.
+
+우리는 개방적이고 환영하며 다양하고 포용적이며 건강한 공동체에 기여하는 방식으로 행동하고 교류할 것을 다짐한다.
+
+## 우리의 기준
+
+우리 공동체에 긍정적인 환경에 기여하는 행동의 예로는 다음과 같은 것들이 있다.
+
+* 다른 사람에 대한 공감과 친절을 보여주는 것
+* 서로 다른 의견, 관점, 경험을 존중하는 것
+* 건설적 피드백을 주고 우아하게 받아들이는 것
+* 우리의 실수로 피해를 입은 사람들에게 책임을 받아들이고 사과하며 경험으로부터 배우는 것
+* 개인으로서 우리뿐만 아니라 전체적인 공동체를 위해 가장 좋은 것에 초점을 맞추고 있습니다.
+
+받아들일 수 없는 행동의 예로는 다음과 같은 것들이 있다.
+
+* 성적 언어나 이미지의 사용, 그리고 어떤 종류의 성적 관심이나 발전
+* 트롤링, 모욕 또는 경멸적인 발언, 그리고 개인적 또는 정치적 공격
+* 공공 또는 사적인 괴롭힘
+* 명시적 허가 없이 물리적 또는 이메일 주소와 같은 타인의 개인 정보를 게시합니다.
+* 개별 구성원, 기여자 또는 지도자를 명시적 허가 없이 개별 지정 커뮤니티 메커니즘 외부에서 접촉하는 경우
+* 전문적 환경에서 부적절하다고 볼 수 있는 다른 행위
+
+## 집행책임
+
+지역사회 지도자들은 우리의 허용 가능한 행동 기준을 명확히 하고 집행할 책임이 있으며 부적절하고 위협적이며 공격적이거나 해롭다고 생각하는 모든 행동에 대응하여 적절하고 공정한 시정 조치를 취할 것이다.
+
+지역사회 지도자들은 이 행동강령에 정렬되지 않은 댓글, 커밋, 코드, 위키 편집, 이슈 및 기타 기여를 제거, 편집 또는 거부할 권리와 책임이 있으며, 적절한 경우 절제 결정의 이유를 전달할 것이다.
+
+## 범위
+
+이 행동강령은 모든 공동체 공간 내에서 적용되며, 개인이 공공 공간에서 공동체를 공식적으로 대표할 때에도 적용된다. 우리 공동체를 대표하는 예로는 공식 이메일 주소를 사용하거나, 공식 소셜미디어 계정을 통해 게시하거나, 온·오프라인 행사에서 임명된 대표 역할을 하는 것이 있다.
+
+## 시행
+
+욕설, 괴롭힘 또는 기타 용납할 수 없는 행동의 사례는 오픈소스@github.com에서 집행을 담당하는 지역사회 지도자들에게 보고될 수 있다. 모든 민원은 신속하고 공정하게 검토 및 조사될 것이다.
+
+모든 지역사회 지도자들은 어떤 사건의 기자의 사생활과 보안을 존중할 의무가 있다.
+
+## 집행지침
+
+지역사회 지도자들은 이러한 지역사회 영향 지침을 따라 이 행동 강령을 위반하여 그들이 생각하는 모든 행동에 대한 결과를 결정할 것입니다.
+
+### 1. Correction
+
+**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
+
+**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
+
+### 2. Warning
+
+**Community Impact**: A violation through a single incident or series of actions.
+
+**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+
+### 3. Temporary Ban
+
+**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+
+**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+
+### 4. Permanent Ban
+
+**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior,  harassment of an individual, or aggression toward or disparagement of classes of individuals.
+
+**Consequence**: A permanent ban from any sort of public interaction within the community.
+
+## Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.0, available at <https://www.contributor-covenant.org/version/2/0/code_of_conduct.html>.
+
+Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
+
+[homepage]: https://www.contributor-covenant.org
+
+For answers to common questions about this code of conduct, see the FAQ at <https://www.contributor-covenant.org/faq>. Translations are available at <https://www.contributor-covenant.org/translations>. %}'
+짧은 제목: '{% 데이터 변수에 대한 스타트.product.prodname_codespace %}'
+도입부: '{% 데이터 변수를 제거하십시오.product.prodname_github_codespace %} 5분 내에.'
+'제목 투 디퍼 프롬 파일 이름' 허용: 사실
+버전:
+ fpt: ' *'
+ 게크: ' *'
+type : quick_start
+주제:
+  - 코드스페이스
 redirect_from:
-  - /codespaces/codespaces-quickstart
+  - /codespace/codespaces-quickstart
 ---
 
-## Introduction
+## 소개
 
-In this guide, you'll create a codespace from a template repository and explore some of the essential features available to you within the codespace. You'll work in the browser version of {% data variables.product.prodname_vscode %}, which is initially the default editor for {% data variables.product.prodname_github_codespaces %}. After trying out this quickstart you can use {% data variables.product.prodname_codespaces %} in other editors, and you can change the default editor. Links are provided at the end of this guide.
+이 안내서에서 템플릿 저장소에서 코드스페이스를 만들고 코드스페이스 내에서 당신이 사용할 수 있는 필수 기능 중 일부를 탐색합니다. {% 데이터 변수.product.prodname_vscode %}의 브라우저 버전에서 작업할 것입니다. 처음에는 {% 데이터 변수.product.prodname_github_codespace %}의 기본 편집기입니다. 이 빠른 시작을 시도한 후 다른 편집기에서 {% 데이터 변수.product.prodname_codespace %}를 사용할 수 있으며 기본 편집기를 변경할 수 있습니다. 링크는 en에서 제공됩니다.이 가이드의 d.
 
-From this quickstart, you'll learn how to create a codespace, connect to a forwarded port to view your running application, publish your codespace to a new repository, and personalize your setup with extensions.
+이 빠른 시작에서, 당신은 코드 공간을 만들고, 실행 중인 애플리케이션을 보기 위해 전달된 포트에 연결하고, 코드 공간을 새로운 저장소에 게시하고, 확장으로 설정을 개인화하는 방법을 배울 것입니다.
 
-For more information on exactly how {% data variables.product.prodname_github_codespaces %} works, see the companion guide "[AUTOTITLE](/codespaces/getting-started/deep-dive)."
+정확히 {% 데이터 변수.product.prodname_github_codespace %}가 어떻게 작동하는지에 대한 자세한 내용은 동반 가이드를 참조하십시오."[자동제목](/codespace/getting-started/deep-dive)."
 
-## Creating your codespace
+## 코드스페이스 생성
 
-1. Navigate to the [github/haikus-for-codespaces](https://github.com/github/haikus-for-codespaces) template repository.
+1. 네비게이트 투 더 [기/하이쿠스-포-코드스페이스](https://github.com/github/haikus-for-codespaces) 템플릿 저장소
 {% data reusables.codespaces.use-this-template %}
 
-## Running the application
+## 애플리케이션 실행
 
-Once your codespace is created, the template repository will be automatically cloned into it. Now you can run the application and launch it in a browser.
+코드스페이스가 생성되면 템플릿 저장소가 자동으로 복제됩니다. 이제 애플리케이션을 실행하여 브라우저로 실행할 수 있습니다.
 
-1. When the terminal becomes available, enter the command `npm run dev`. This example uses a Node.js project, and this command runs the script labeled "dev" in the `package.json` file, which starts up the web application defined in the sample repository.
+1. 단말이 사용가능한 경우, 명령어 입력 `npm run dev`. This example uses a Node.js project, and this command runs the script labeled "dev" in the `package.json` file, which starts up the web application defined in the sample repository.
 
    ![Screenshot of the Terminal in {% data variables.product.prodname_vscode_shortname %} with the "npm run dev" command entered.](/assets/images/help/codespaces/codespaces-npm-run-dev.png)
 
@@ -40,7 +119,7 @@ Once your codespace is created, the template repository will be automatically cl
 
    ![Screenshot of the pop-up message: "Your application running on port 3000 is available." Below this is a green button, labeled "Open in Browser."](/assets/images/help/codespaces/quickstart-port-toast.png)
 
-1. Click **Open in Browser** to view your running application in a new tab.
+1. 클릭 **Open in Browser** to view your running application in a new tab.
 
 ## Edit the application and view changes
 
