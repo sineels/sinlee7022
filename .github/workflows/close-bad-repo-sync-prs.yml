@@ -1,31 +1,31 @@
-name: Close bad repo-sync PRs
+sinlee702w@gmail.com :   근접 불량 레포싱크 PR
 
-# **What it does**:
-#   Closes and PR from `repo-sync` to `main` that wasn't created by a Hubber.
-# **Why we have it**:
-#   Unfortunately, a lot of PRs in github/docs are created by people who
-#   shouldn't be creating such PRs. We bot our bots to own it.
-# **Who does it impact**: Open-source.
+#**무슨짓**:
+# 허버가 만든 ‘레포싱크’부터 ‘메인’까지 클로즈와 PR.
+#**왜 우리가 가지고 있는지**:
+# 불행하게도, github/doc의 많은 PR은 사람들이 만들어집니다.
+# 그런 홍보를 만들어서는 안 된다. 우리는 그것을 소유하기 위해 우리의 봇들을 망치게 한다.
+# **누가 영향을 미치는가*: 오픈 소스.
 
-on:
-  pull_request_target:
+온:
+ pull_request_target :
 
-permissions:
-  contents: write
-  pull-requests: write
+허가:
+ 내용 : 적음
+ 당김 요청 :  적음
 
-jobs:
-  close-invalid-repo-sync-pr:
-    if: ${{ github.repository == 'github/docs' && github.event.pull_request.base.ref == 'main' && github.event.pull_request.head.ref == 'repo-sync' }}
-    name: Close if invalid repo-sync PR author
-    runs-on: ubuntu-latest
-    steps:
-      - name: Close pull request if unwanted
-        uses: actions/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
-        with:
-          github-token: ${{ secrets.DOCS_BOT_PAT_WRITEORG_PROJECT }}
-          script: |
-            const { owner, repo } = context.repo
+직업:
+ 근접무효-레포-싱크-pr :
+ 만약 :  ${{ github.repository == '기/닥스'  && github.event.pull_request.base.ref ==  'main'  && github.event.pull_request.head.ref ==  'repo-sync' }}
+ 이름 :  무효인 repo-sync PR 작성자 종료
+ 런온 :  우분투 후기
+ 스텝 :
+       -  이름:  원하지 않는 경우 가까운 당김 요청
+ 사용 :  동작/github-script@d7906e4ad0b1822421a7e6a35d5ca353c962f410
+ 와 :
+ 기 토큰 :  ${{ 비밀 Docs_bot_pat_writeorg_project }}
+ 스크립트 :  |
+ const { owner, repo } = context.repo 
             const prCreator = context.actor
             const prNumber = context.issue.number
 
